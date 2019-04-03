@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" id="com.eidiko.portlets.EidikoEmployeeTimelinePortlet.62ee19a430">
+	<portlet>
+		<portlet-name>EidikoEmployeeTimeline</portlet-name>
+		<display-name>EidikoEmployeeTimeline</display-name>
+		<display-name xml:lang="en">EidikoEmployeeTimeline</display-name>
+		<portlet-class>com.eidiko.portlets.EidikoEmployeeTimelinePortlet</portlet-class>
+		<init-param>
+			<name>wps.markup</name>
+			<value>html</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<resource-bundle>com.eidiko.portlets.nl.EidikoEmployeeTimelinePortletResource</resource-bundle>
+		<portlet-info>
+			<title>EidikoEmployeeTimeline</title>
+			<short-title>EidikoEmployeeTimeline</short-title>
+			<keywords>EidikoEmployeeTimeline</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>GetEmployeeTimeline_URL</name>
+				<value>http://192.168.3.62:8080/EmployeeTimeline/rest/getTimelineByEmployeeId/</value>
+			</preference>
+			
+			<preference>
+				<name>PostEmployeeTimeline_URL</name>
+				<value>http://192.168.3.62:8080/EmployeeTimeline/rest/addTimeline</value>
+			</preference>
+		</portlet-preferences>
+			<container-runtime-option> 
+          <name>javax.portlet.actionScopedRequestAttributes</name> 
+          <value>true</value> 
+          <value>numberOfCachedScopes</value> 
+          <value>10</value> 
+  </container-runtime-option>
+	</portlet>
+	<default-namespace>http://EidikoEmployeeTimelinePortlet/</default-namespace>
+</portlet-app>
